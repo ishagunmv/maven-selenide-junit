@@ -19,21 +19,21 @@ import static data.Constant.Url.JENKINS;
 public class JenkinsTest extends BaseTest {
 
 
-    @BeforeEach
-    void loginJenkinsTest(){
-        basePage.goToUrl(JENKINS);
-        jenkinsPage.logInJenkins();
-    }
-
-    @Test
-    void release521Test(){
-        jenkinsPage.release521.shouldBe(Condition.visible).click();
-        jenkinsPage.startBuild();
-    }
-
-    @Test
-    void trunkReleaseCandidateTest(){
-        jenkinsPage.trunkReleaseCandidate.shouldBe(Condition.visible).click();
-        jenkinsPage.startBuild();
-    }
+//    @BeforeEach
+//    void loginJenkinsTest(){
+//        basePage.goToUrl(JENKINS);
+//        jenkinsPage.logInJenkins();
+//    }
+//
+//    @Test
+//    void release521Test(){
+//        jenkinsPage.release521.shouldBe(Condition.visible).click();
+//        jenkinsPage.startBuild();
+//    }
+//
+//    @Test
+//    void trunkReleaseCandidateTest(){
+//        jenkinsPage.trunkReleaseCandidate.shouldBe(Condition.visible).click();
+//        jenkinsPage.startBuild();
+//    }
 }
