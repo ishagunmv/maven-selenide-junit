@@ -7,3 +7,4 @@ JUnit
 Allure
 Maven
 Jenkins-build
+*/src/main/common/Config.java
