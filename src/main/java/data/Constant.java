@@ -9,6 +9,8 @@ public class Constant {
     }
 
     public static class UsersData {
+        public static final String LOGIN_JENKINS = "shagun";
+        public static final String PASSWORD_JENKINS = "d7g0wp4";
     }
 
     public static class Urls {
