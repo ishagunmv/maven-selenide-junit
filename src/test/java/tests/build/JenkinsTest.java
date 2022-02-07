@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import tests.base.BaseTest;
 
-import static data.Constant.Url.JENKINS;
+import static data.Constant.Url.*;
 
 
 @Feature("Jenkins autostart build")
@@ -25,45 +25,45 @@ public class JenkinsTest extends BaseTest {
         jenkinsPage.logInJenkins();
     }
 
-    /** 5.21 start */
+    /** release start */
     @Test
-    void atom521Test(){
-        jenkinsPage.release521.shouldBe(Condition.visible).click();
+    void atomReleaseTest(){
+        basePage.goToUrl(RELEASE_JENKINS);
         jenkinsPage.selectAtom();
         jenkinsPage.startBuild();
     }
 
     @Test
-    void arteria521Test(){
-        jenkinsPage.release521.shouldBe(Condition.visible).click();
+    void arteriaReleaseTest(){
+        basePage.goToUrl(RELEASE_JENKINS);
         jenkinsPage.selectArteria();
         jenkinsPage.startBuild();
     }
 
     @Test
-    void arteriaSoc521Test(){
-        jenkinsPage.release521.shouldBe(Condition.visible).click();
+    void arteriaSocReleaseTest(){
+        basePage.goToUrl(RELEASE_JENKINS);
         jenkinsPage.selectArteriaSoc();
         jenkinsPage.startBuild();
     }
 
     @Test
-    void x86_64_521Test(){
-        jenkinsPage.release521.shouldBe(Condition.visible).click();
+    void x86_64ReleaseTest(){
+        basePage.goToUrl(RELEASE_JENKINS);
         jenkinsPage.selectX86_64();
         jenkinsPage.startBuild();
     }
 
     @Test
-    void lira521Test(){
-        jenkinsPage.release521.shouldBe(Condition.visible).click();
+    void liraReleaseTest(){
+        basePage.goToUrl(RELEASE_JENKINS);
         jenkinsPage.selectLira();
         jenkinsPage.startBuild();
     }
 
     @Test
-    void jetson521Test(){
-        jenkinsPage.release521.shouldBe(Condition.visible).click();
+    void jetsonReleaseTest(){
+        basePage.goToUrl(RELEASE_JENKINS);
         jenkinsPage.selectJetson();
         jenkinsPage.startBuild();
     }
@@ -71,42 +71,42 @@ public class JenkinsTest extends BaseTest {
     /** master start */
     @Test
     void atomMasterTest(){
-        jenkinsPage.trunkReleaseCandidate.shouldBe(Condition.visible).click();
+        basePage.goToUrl(MASTER_JENKINS);
         jenkinsPage.selectAtom();
         jenkinsPage.startBuild();
     }
 
     @Test
     void arteriaMasterTest(){
-        jenkinsPage.trunkReleaseCandidate.shouldBe(Condition.visible).click();
+        basePage.goToUrl(MASTER_JENKINS);
         jenkinsPage.selectArteria();
         jenkinsPage.startBuild();
     }
 
     @Test
     void arteriaSocMasterTest(){
-        jenkinsPage.trunkReleaseCandidate.shouldBe(Condition.visible).click();
+        basePage.goToUrl(MASTER_JENKINS);
         jenkinsPage.selectArteriaSoc();
         jenkinsPage.startBuild();
     }
 
     @Test
     void x86_64MasterTest(){
-        jenkinsPage.trunkReleaseCandidate.shouldBe(Condition.visible).click();
+        basePage.goToUrl(MASTER_JENKINS);
         jenkinsPage.selectX86_64();
         jenkinsPage.startBuild();
     }
 
     @Test
     void liraMasterTest(){
-        jenkinsPage.trunkReleaseCandidate.shouldBe(Condition.visible).click();
+        basePage.goToUrl(MASTER_JENKINS);
         jenkinsPage.selectLira();
         jenkinsPage.startBuild();
     }
 
     @Test
     void jetsonMasterTest(){
-        jenkinsPage.trunkReleaseCandidate.shouldBe(Condition.visible).click();
+        basePage.goToUrl(MASTER_JENKINS);
         jenkinsPage.selectJetson();
         jenkinsPage.startBuild();
     }

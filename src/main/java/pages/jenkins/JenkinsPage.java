@@ -57,9 +57,6 @@ public class JenkinsPage extends BasePage {
     public final SelenideElement inputPassword = $x("//input[@name='j_password']");
     public final SelenideElement buttonLogIn = $x("//button[@id='yui-gen1-button']");
 
-    public final SelenideElement release521 = $x("//a[@href='job/Release_5.21/']");
-    public final SelenideElement trunkReleaseCandidate = $x("//a[@href='job/Trunk_Release_Candidate/']");
-
     public final SelenideElement buildPage = $x("//a[text()='Build with Parameters']");
     public final SelenideElement buttonBuild = $x("//button[@id='yui-gen1-button']");
     public final SelenideElement selectDeviceType = $x("//select/option[@value='ALL']/..");
