@@ -1,5 +1,5 @@
 package tests.build;
-import com.codeborne.selenide.Condition;
+
 import common.Listener;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
