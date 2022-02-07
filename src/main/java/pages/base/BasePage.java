@@ -2,11 +2,16 @@ package pages.base;
 
 import com.codeborne.selenide.*;
 import org.openqa.selenium.Keys;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class BasePage {
+
+    public static final Logger LOGGER = LoggerFactory.getLogger(BasePage.class);
 
     /** Методы перехода на страницы */
     public void goToDevice(String deviceIp) {

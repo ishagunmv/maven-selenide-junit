@@ -17,10 +17,38 @@ public class JenkinsPage extends BasePage {
         buttonLogIn.shouldBe(Condition.visible).click();
     }
 
-
-    public void startBuild(){
-        buildPage.shouldBe(Condition.visible).click();
+    public void startBuild() {
         buttonBuild.shouldBe(Condition.visible).click();
+    }
+
+    public void  selectAtom() {
+        buildPage.shouldBe(Condition.visible).click();
+        selectDeviceType.shouldBe(Condition.visible).selectOptionByValue("SENSOR_ATOM");
+    }
+
+    public void  selectArteria() {
+        buildPage.shouldBe(Condition.visible).click();
+        selectDeviceType.shouldBe(Condition.visible).selectOptionByValue("SENSOR_ARTERIA");
+    }
+
+    public void  selectArteriaSoc() {
+        buildPage.shouldBe(Condition.visible).click();
+        selectDeviceType.shouldBe(Condition.visible).selectOptionByValue("SENSOR_ARTERIA_SOC");
+    }
+
+    public void  selectX86_64() {
+        buildPage.shouldBe(Condition.visible).click();
+        selectDeviceType.shouldBe(Condition.visible).selectOptionByValue("X86_64");
+    }
+
+    public void  selectLira() {
+        buildPage.shouldBe(Condition.visible).click();
+        selectDeviceType.shouldBe(Condition.visible).selectOptionByValue("SENSOR_LIRA");
+    }
+
+    public void  selectJetson() {
+        buildPage.shouldBe(Condition.visible).click();
+        selectDeviceType.shouldBe(Condition.visible).selectOptionByValue("SENSOR_JETSON");
     }
 
     /** xpath */
@@ -34,5 +62,7 @@ public class JenkinsPage extends BasePage {
 
     public final SelenideElement buildPage = $x("//a[text()='Build with Parameters']");
     public final SelenideElement buttonBuild = $x("//button[@id='yui-gen1-button']");
+    public final SelenideElement selectDeviceType = $x("//select/option[@value='ALL']/..");
+
 
 }

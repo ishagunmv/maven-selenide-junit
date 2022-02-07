@@ -25,15 +25,89 @@ public class JenkinsTest extends BaseTest {
         jenkinsPage.logInJenkins();
     }
 
+    /** 5.21 start */
     @Test
-    void release521Test(){
+    void atom521Test(){
         jenkinsPage.release521.shouldBe(Condition.visible).click();
+        jenkinsPage.selectAtom();
         jenkinsPage.startBuild();
     }
 
     @Test
-    void trunkReleaseCandidateTest(){
+    void arteria521Test(){
+        jenkinsPage.release521.shouldBe(Condition.visible).click();
+        jenkinsPage.selectArteria();
+        jenkinsPage.startBuild();
+    }
+
+    @Test
+    void arteriaSoc521Test(){
+        jenkinsPage.release521.shouldBe(Condition.visible).click();
+        jenkinsPage.selectArteriaSoc();
+        jenkinsPage.startBuild();
+    }
+
+    @Test
+    void x86_64_521Test(){
+        jenkinsPage.release521.shouldBe(Condition.visible).click();
+        jenkinsPage.selectX86_64();
+        jenkinsPage.startBuild();
+    }
+
+    @Test
+    void lira521Test(){
+        jenkinsPage.release521.shouldBe(Condition.visible).click();
+        jenkinsPage.selectLira();
+        jenkinsPage.startBuild();
+    }
+
+    @Test
+    void jetson521Test(){
+        jenkinsPage.release521.shouldBe(Condition.visible).click();
+        jenkinsPage.selectJetson();
+        jenkinsPage.startBuild();
+    }
+
+    /** master start */
+    @Test
+    void atomMasterTest(){
         jenkinsPage.trunkReleaseCandidate.shouldBe(Condition.visible).click();
+        jenkinsPage.selectAtom();
+        jenkinsPage.startBuild();
+    }
+
+    @Test
+    void arteriaMasterTest(){
+        jenkinsPage.trunkReleaseCandidate.shouldBe(Condition.visible).click();
+        jenkinsPage.selectArteria();
+        jenkinsPage.startBuild();
+    }
+
+    @Test
+    void arteriaSocMasterTest(){
+        jenkinsPage.trunkReleaseCandidate.shouldBe(Condition.visible).click();
+        jenkinsPage.selectArteriaSoc();
+        jenkinsPage.startBuild();
+    }
+
+    @Test
+    void x86_64MasterTest(){
+        jenkinsPage.trunkReleaseCandidate.shouldBe(Condition.visible).click();
+        jenkinsPage.selectX86_64();
+        jenkinsPage.startBuild();
+    }
+
+    @Test
+    void liraMasterTest(){
+        jenkinsPage.trunkReleaseCandidate.shouldBe(Condition.visible).click();
+        jenkinsPage.selectLira();
+        jenkinsPage.startBuild();
+    }
+
+    @Test
+    void jetsonMasterTest(){
+        jenkinsPage.trunkReleaseCandidate.shouldBe(Condition.visible).click();
+        jenkinsPage.selectJetson();
         jenkinsPage.startBuild();
     }
 }

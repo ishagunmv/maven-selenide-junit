@@ -18,7 +18,7 @@ import static common.Config.*;
 
 public abstract class BaseTest {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(BaseTest.class);
+    public static final Logger LOGGER = LoggerFactory.getLogger(BaseTest.class);
     protected BasePage basePage = new BasePage();
     protected JenkinsPage jenkinsPage = new JenkinsPage();
 
