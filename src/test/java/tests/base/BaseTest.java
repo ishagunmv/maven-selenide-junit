@@ -5,6 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import pages.base.BasePage;
+import pages.gitlub.GitLubPage;
 import pages.jenkins.JenkinsPage;
 
 
@@ -21,6 +22,7 @@ public abstract class BaseTest {
     public static final Logger LOGGER = LoggerFactory.getLogger(BaseTest.class);
     protected BasePage basePage = new BasePage();
     protected JenkinsPage jenkinsPage = new JenkinsPage();
+    protected GitLubPage gitLubPage = new GitLubPage();
 
 
     /** Очистка скриншотов и отчетов */
