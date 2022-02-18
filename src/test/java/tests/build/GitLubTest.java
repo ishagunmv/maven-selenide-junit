@@ -41,6 +41,6 @@ public class GitLubTest extends BaseTest {
 
    @AfterEach
     void waitforReleaseConflict() throws InterruptedException {
-        Thread.sleep(30000);
+        Thread.sleep(60000);
     }
 }
