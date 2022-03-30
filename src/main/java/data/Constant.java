@@ -32,7 +32,7 @@ public class Constant {
     public static class Builder {
         public static final String ONE_BUILD_JENKINS = JENKINS_RELEASE_5_22;
         public static final String TWO_BUILD_JENKINS = JENKINS_RELEASE_5_21;
-        public static final String ONE_BUILD_GITLAB = GITLAB_MASTER;
+        public static final String ONE_BUILD_GITLAB = GITLAB_RELEASE_5_22;
         public static final String TWO_BUILD_GITLAB = GITLAB_RELEASE_5_21;
     }
 }
