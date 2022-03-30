@@ -18,14 +18,14 @@ public class GitLubPage extends BasePage {
     }
 
 
-    public void oneVariableSelect() {
+    public void oneVariableSelect(String value) {
         oneVariableKey.shouldBe(Condition.visible).sendKeys("GIT_WEBAPPS_BRANCH");
-        oneVariableValue.shouldBe(Condition.visible).sendKeys(RELEASE_GITLAB);
+        oneVariableValue.shouldBe(Condition.visible).sendKeys(value);
     }
 
-    public void twoVariableSelect() {
+    public void twoVariableSelect(String value) {
         twoVariableKey.shouldBe(Condition.visible).sendKeys("GIT_WEBINTERFACE_BRANCH");
-        twoVariableValue.shouldBe(Condition.visible).sendKeys(RELEASE_GITLAB);
+        twoVariableValue.shouldBe(Condition.visible).sendKeys(value);
     }
 
     public void startPipeline() {

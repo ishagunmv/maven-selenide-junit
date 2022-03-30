@@ -9,6 +9,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import tests.base.BaseTest;
 
+import static data.Constant.Builder.*;
 import static data.Constant.Url.*;
 
 
@@ -26,16 +27,18 @@ public class GitLubTest extends BaseTest {
     }
 
     @Test
-    void masterStart() {
+    void OneBuildStart() {
         basePage.goToUrl(GITLAB_PIPELINE_PAGE);
+        gitLubPage.oneVariableSelect(ONE_BUILD_GITLAB);
+        gitLubPage.twoVariableSelect(ONE_BUILD_GITLAB);
         gitLubPage.startPipeline();
     }
 
     @Test
-    void releaseStart() {
+    void TwoBuildStart() {
         basePage.goToUrl(GITLAB_PIPELINE_PAGE);
-        gitLubPage.oneVariableSelect();
-        gitLubPage.twoVariableSelect();
+        gitLubPage.oneVariableSelect(TWO_BUILD_GITLAB);
+        gitLubPage.twoVariableSelect(TWO_BUILD_GITLAB);
         gitLubPage.startPipeline();
     }
 

@@ -8,7 +8,8 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import tests.base.BaseTest;
 
-import static data.Constant.Url.*;
+import static data.Constant.Builder.*;
+import static data.Constant.Url.JENKINS;
 
 
 @Feature("Jenkins autostart build")
@@ -25,88 +26,88 @@ public class JenkinsTest extends BaseTest {
         jenkinsPage.logInJenkins();
     }
 
-    /** release start */
+    /** one build */
     @Test
-    void atomReleaseTest(){
-        basePage.goToUrl(RELEASE_JENKINS);
+    void atomOneBuildTest(){
+        basePage.goToUrl(ONE_BUILD_JENKINS);
         jenkinsPage.selectAtom();
         jenkinsPage.startBuild();
     }
 
     @Test
-    void arteriaReleaseTest(){
-        basePage.goToUrl(RELEASE_JENKINS);
+    void arteriaOneBuildTest(){
+        basePage.goToUrl(ONE_BUILD_JENKINS);
         jenkinsPage.selectArteria();
         jenkinsPage.startBuild();
     }
 
     @Test
-    void arteriaSocReleaseTest(){
-        basePage.goToUrl(RELEASE_JENKINS);
+    void arteriaSocOneBuildTest(){
+        basePage.goToUrl(ONE_BUILD_JENKINS);
         jenkinsPage.selectArteriaSoc();
         jenkinsPage.startBuild();
     }
 
     @Test
-    void x86_64ReleaseTest(){
-        basePage.goToUrl(RELEASE_JENKINS);
+    void x86_64OneBuildTest(){
+        basePage.goToUrl(ONE_BUILD_JENKINS);
         jenkinsPage.selectX86_64();
         jenkinsPage.startBuild();
     }
 
     @Test
-    void liraReleaseTest(){
-        basePage.goToUrl(RELEASE_JENKINS);
+    void liraOneBuildTest(){
+        basePage.goToUrl(ONE_BUILD_JENKINS);
         jenkinsPage.selectLira();
         jenkinsPage.startBuild();
     }
 
     @Test
-    void jetsonReleaseTest(){
-        basePage.goToUrl(RELEASE_JENKINS);
+    void jetsonOneBuildTest(){
+        basePage.goToUrl(ONE_BUILD_JENKINS);
         jenkinsPage.selectJetson();
         jenkinsPage.startBuild();
     }
 
-    /** master start */
+    /** two build */
     @Test
-    void atomMasterTest(){
-        basePage.goToUrl(MASTER_JENKINS);
+    void atomTwoBuildTest(){
+        basePage.goToUrl(TWO_BUILD_JENKINS);
         jenkinsPage.selectAtom();
         jenkinsPage.startBuild();
     }
 
     @Test
-    void arteriaMasterTest(){
-        basePage.goToUrl(MASTER_JENKINS);
+    void arteriaTwoBuildTest(){
+        basePage.goToUrl(TWO_BUILD_JENKINS);
         jenkinsPage.selectArteria();
         jenkinsPage.startBuild();
     }
 
     @Test
-    void arteriaSocMasterTest(){
-        basePage.goToUrl(MASTER_JENKINS);
+    void arteriaSocTwoBuildTest(){
+        basePage.goToUrl(TWO_BUILD_JENKINS);
         jenkinsPage.selectArteriaSoc();
         jenkinsPage.startBuild();
     }
 
     @Test
-    void x86_64MasterTest(){
-        basePage.goToUrl(MASTER_JENKINS);
+    void x86_64TwoBuildTest(){
+        basePage.goToUrl(TWO_BUILD_JENKINS);
         jenkinsPage.selectX86_64();
         jenkinsPage.startBuild();
     }
 
     @Test
-    void liraMasterTest(){
-        basePage.goToUrl(MASTER_JENKINS);
+    void liraTwoBuildTest(){
+        basePage.goToUrl(TWO_BUILD_JENKINS);
         jenkinsPage.selectLira();
         jenkinsPage.startBuild();
     }
 
     @Test
-    void jetsonMasterTest(){
-        basePage.goToUrl(MASTER_JENKINS);
+    void jetsonTwoBuildTest(){
+        basePage.goToUrl(TWO_BUILD_JENKINS);
         jenkinsPage.selectJetson();
         jenkinsPage.startBuild();
     }
