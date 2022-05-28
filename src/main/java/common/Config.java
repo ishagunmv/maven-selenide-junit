@@ -14,7 +14,7 @@ public class Config {
     /** Очистка директории скриншотов перед стартом теста */
     public static final Boolean CLEAR_REPORTS_DIR = false;
     /** Ожидание любого элемента по умолчавнию */
-    public static final int TIMEOUT_ELEMENTS_MS = 60000;
+    public static final int TIMEOUT_ELEMENTS_MS = 10000;
 
     /** Старт на локальном компьютере или в доккере */
     public static final Boolean START_LOCAL = false;
