@@ -1,8 +1,12 @@
 package tests.build;
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.logevents.SelenideLogger;
+import common.AllureSelenide;
 import common.Listener;
 import io.qameta.allure.Feature;
+import io.qameta.allure.Step;
 import io.qameta.allure.Story;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -15,9 +19,12 @@ import static data.Constant.Url.JENKINS;
 @Story("build firmware device")
 //@Execution(ExecutionMode.CONCURRENT) // Запуск тестов в нескольких потоках
 @ExtendWith(Listener.class)
-
 public class JenkinsTest extends BaseTest {
 
+    @BeforeAll
+    public void setUp() throws Exception {
+        SelenideLogger.addListener("allure", new AllureSelenide());
+    }
 
     @Test
     void loginJenkinsTest(){
