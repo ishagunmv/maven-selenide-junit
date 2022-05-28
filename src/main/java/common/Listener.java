@@ -32,20 +32,4 @@ public class Listener implements TestWatcher, BeforeAllCallback, AfterEachCallba
         clearBrowserCookieAndStorage();
     }
 
-    @Override
-    public void testFailed(ExtensionContext context, Throwable cause) {
-        LOGGER.info("Test " + context.getTestMethod().get().getName() + " - FAILED!");
-        String screenshotName = context.getTestMethod().get().getName() +
-                String.valueOf(System.currentTimeMillis()).substring(9, 13);
-        LOGGER.info("Trying to trace screenshot...");
-        Selenide.screenshot(screenshotName);
-        attachScreenshotToAllure();
-    }
-
-    @Attachment(value = "Attachment Screenshot", type = "image/png")
-    public byte[] attachScreenshotToAllure() {
-        if (WebDriverRunner.hasWebDriverStarted())
-            return ((TakesScreenshot) WebDriverRunner.getWebDriver()).getScreenshotAs(OutputType.BYTES);
-        else return null;
-    }
 }
