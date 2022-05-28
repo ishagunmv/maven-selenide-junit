@@ -2,6 +2,7 @@ package common;
 
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.WebDriverRunner;
+import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.Attachment;
 import org.junit.jupiter.api.extension.AfterEachCallback;
 import org.junit.jupiter.api.extension.BeforeAllCallback;
@@ -23,6 +24,7 @@ public class Listener implements TestWatcher, BeforeAllCallback, AfterEachCallba
     @Override
     public void beforeAll(ExtensionContext extensionContext) {
         extensionContext.getRoot().getStore(GLOBAL).put(true, this);
+        SelenideLogger.addListener("allure", new AllureSelenide());
         }
 
     @Override

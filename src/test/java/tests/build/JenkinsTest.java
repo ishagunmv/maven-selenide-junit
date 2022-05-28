@@ -21,11 +21,6 @@ import static data.Constant.Url.JENKINS;
 @ExtendWith(Listener.class)
 public class JenkinsTest extends BaseTest {
 
-    @BeforeAll
-    public void setUp() throws Exception {
-        SelenideLogger.addListener("allure", new AllureSelenide());
-    }
-
     @Test
     void loginJenkinsTest(){
         basePage.goToUrl("http://google.com");
